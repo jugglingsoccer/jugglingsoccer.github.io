@@ -8,7 +8,7 @@
     <meta property="wb:webmaster" content="b3909c47756a0dcc" />
     
     <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
-
+    <script src=" http://tjs.sjs.sinajs.cn/open/api/js/wb.js?appkey=3468742394" type="text/javascript" charset="utf-8"></script>
     <title>Jugglingsoccer.github.io</title>
   </head>
 
@@ -40,7 +40,8 @@ $ git checkout gh-pages
 
 <p>If you're using the GitHub for Mac, simply sync your repository and you'll see the new branch.</p>
 
-<button type="button" onclick="alert('Hello world!')">微博登录</button>
+
+<div id="wb_connect_btn"></div>
 <h3>
 <a name="designer-templates" class="anchor" href="#designer-templates"><span class="octicon octicon-link"></span></a>Designer Templates</h3>
 
@@ -69,6 +70,22 @@ $ git checkout gh-pages
         <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
       </footer>
     </div>
+	<script>
+WB2.anyWhere(function(W){
+    W.widget.connectButton({
+        id: "wb_connect_btn",
+        type: '3,2',
+        callback : {
+            login:function(o){
+                alert(o.screen_name)
+            },
+            logout:function(){
+                alert('logout');
+            }
+        }
+    });
+});
+	</script>
 
     
 
