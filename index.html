@@ -1,60 +1,102 @@
-<!DOCTYPE html>
-<html>
 
+<!DOCTYPE html>
+<html lang="en">
   <head>
-    <meta charset='utf-8' />
-    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
-    <meta name="description" content="Jugglingsoccer.github.io : Juggling Soccer weibo api" />
-    <meta property="wb:webmaster" content="b3909c47756a0dcc" />
-    
-    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
-    <script src=" http://tjs.sjs.sinajs.cn/open/api/js/wb.js?appkey=3468742394" type="text/javascript" charset="utf-8"></script>
-    <title>Jugglingsoccer.github.io</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="BTCPocket: yet another bitcoin price tracker on iOS">
+    <meta name="author" content="air.chenbo@gmail.com">
+    <link rel="shortcut icon" href="../../docs-assets/ico/favicon.png">
+
+    <title>Juggling Soccer</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="./css/bootstrap.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="./css/custom.css" rel="stylesheet">
+
+    <link href="themes/1/js-image-slider.css" rel="stylesheet" type="text/css" />
+    <script src="themes/1/js-image-slider.js" type="text/javascript"></script>
+  <link href='http://fonts.googleapis.com/css?family=Ubuntu' rel='stylesheet' type='text/css'>
+  <script src=" http://tjs.sjs.sinajs.cn/open/api/js/wb.js?appkey=3468742394" type="text/javascript" charset="utf-8"></script>
   </head>
 
   <body>
 
-    <!-- HEADER -->
-    <div id="header_wrap" class="outer">
-        <header class="inner">
-          <h1 id="project_title">让足球飞</h1>
-          <h2 id="project_tagline">一款玩了就停不下来的 iPhone 游戏</h2>
+    <div class="container">
 
-        </header>
-    </div>
+      <!-- Main component for a primary marketing message or call to action -->
+      <div class="jumbotron">
 
-    <!-- MAIN CONTENT -->
-    <div id="main_content_wrap" class="outer">
-      <section id="main_content" class="inner">
-        <h3>Log in with your weibo accounts:</h3>
-	<div id="wb_connect_btn"></div>
-	</section>
+        <div class="row">
+          <div class="col-4 col-sm-4 col-lg-4">
+            <div id="sliderFrame">
+              <div id="slider">
+                <a href="http://www.menucool.com/javascript-image-slider" target="_blank">
+                    <img src="images/iphone51.png">
+                </a>
+                <img src="images/iphone52.png" />
+                <img src="images/iphone53.png" />
+                <img src="images/iphone54.png" />
+                <img src="images/iphone55.png" />
+              </div>
+            </div>
+          </div>
+          <div class="col-8 col-sm-8 col-lg-8">
+          <div class="appheader">
+            <img src="images/icon.png" class="img-rounded" alt="Responsive image">
+            <h1> Juggling Soccer</h1>
+            <h5> juggling the soccer, do not let it touch the ground!</h5>
+          </div>
+          <div class="appcontent">
+          <p><span class="glyphicon glyphicon-ok-sign"></span> Specially created for 2014 World Cup</p>
+          <p><span class="glyphicon glyphicon-ok-sign"></span> 32 countries to pick as you wish</p>
+          <p><span class="glyphicon glyphicon-ok-sign"></span> Provide with 3 difficulty levels</p>
+          <p><span class="glyphicon glyphicon-ok-sign"></span> Offer in-app purchase</p>
+          <p><span class="glyphicon glyphicon-ok-sign"></span> Enjoy this little world cup game</p>
+          <div id="wb_connect_btn"></div>
+          </div>
+          <div class="appdownload"> 
+            <a href="https://itunes.apple.com/us/app/juggling-soccer/id876820928?mt=8"> <img id="donwloadlink" src="images/download.png"> </a>
+          </div>
+      </div>
     </div>
+    </div> <!-- /container -->
 
-    <!-- FOOTER  -->
-    <div id="footer_wrap" class="outer">
-      <footer class="inner">
-        <p>copyright © 2014 </p>
-      </footer>
-    </div>
-	<script>
-WB2.anyWhere(function(W){
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+     <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+    <script src="./js/bootstrap.min.js"></script>
+    <script type="text/javascript">
+    WB2.anyWhere(function (W) {
     W.widget.connectButton({
         id: "wb_connect_btn",
         type: '3,2',
-        callback : {
-            login:function(o){
-                alert(o.screen_name)
+        callback: {
+            login: function (o) { //登录后的回调函数
+                alert("login: " + o.screen_name)
             },
-            logout:function(){
+            logout: function () { //退出后的回调函数
                 alert('logout');
             }
         }
     });
 });
-	</script>
 
-    
+    </script>
+    <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
+  ga('create', 'UA-15706253-11', 'airbob.github.io');
+  ga('send', 'pageview');
+
+</script>
   </body>
 </html>
